@@ -1,5 +1,6 @@
 var expression = "";
 var evaluated_result = 0;
+
 function updateExpression(exp) {
   e = exp ? exp : "0";
   document.getElementById("expression").innerText = e;
@@ -9,7 +10,7 @@ function updateExpression(exp) {
 }
 
 function displayResult(expression) {
-  edited_expression = expression.replaceAll("×", "*").replaceAll("÷", "/");
+  const edited_expression = expression.replaceAll("×", "*").replaceAll("÷", "/");
   evaluated_result = eval(edited_expression);
   document.getElementById("result").innerText = evaluated_result;
 }
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
   document.querySelector("button#eval").addEventListener("click", function (e) {
-    expression = evaluated_result;
+    expression = evaluated_result.toString();
     updateExpression(expression);
   });
 });
