@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính bỏ túi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" integrity="sha512-yXagpXH0ulYCN8G/Wl7GK+XIpdnkh5fGHM5rOzG8Kb9Is5Ua8nZWRx5/RaKypcbSHc56mQe0GBG0HQIGTmd8bw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="text-white bg-gray-700 sm:bg-gray-900 w-screen h-screen flex flex-wrap justify-center items-center">
+    <div class="w-full sm:max-w-md sm:bg-gray-700 sm:shadow-lg sm:rounded-lg quick-sans py-12">
+        <section class="px-4 py-7">
+            <p id="expression" class="text-xs nunito-sans text-gray-400 text-right">0</p>
+            <p id="result" class="text-3xl font-semibold nunito-sans text-white text-right">0</p>
+        </section>
+        <section class="px-4 justify-around">
+            <div class="flex justify-around my-4">
+                <button id="1" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">1</button>
+                <button id="2" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">2</button>
+                <button id="3" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">3</button>
+                <button id="÷" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">÷</button>
+            </div>
+            <div class="flex justify-around my-4">
+                <button id="4" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">4</button>
+                <button id="5" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">5</button>
+                <button id="6" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">6</button>
+                <button id="×" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">×</button>
+            </div>
+            <div class="flex justify-around my-4">
+                <button id="7" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">7</button>
+                <button id="8" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">8</button>
+                <button id="9" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">9</button>
+                <button id="+" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">+</button>
+            </div>
+            <div class="flex justify-around my-4">
+                <button id="0" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">0</button>
+                <button id="AC" class="bg-gray-500 hover:bg-gray-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">AC</button>
+                <button id="D" class="bg-gray-500 hover:bg-gray-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">D</button>
+                <button id="-" class="bg-yellow-500 hover:bg-yellow-400 duration-100 w-16 h-16 rounded-full text-3xl font-semibold">-</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
