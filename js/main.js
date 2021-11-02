@@ -10,7 +10,9 @@ function updateExpression(exp) {
 }
 
 function displayResult(expression) {
-  const edited_expression = expression.replaceAll("×", "*").replaceAll("÷", "/");
+  const edited_expression = expression
+    .replaceAll("×", "*")
+    .replaceAll("÷", "/");
   evaluated_result = eval(edited_expression);
   document.getElementById("result").innerText = evaluated_result;
 }
