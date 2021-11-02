@@ -1,4 +1,5 @@
 var expression = "";
+var evaluated_result = 0;
 function updateExpression(exp) {
   e = exp ? exp : "0";
   document.getElementById("expression").innerText = e;
@@ -9,9 +10,10 @@ function updateExpression(exp) {
 
 function displayResult(expression) {
   edited_expression = expression.replaceAll("×", "*").replaceAll("÷", "/");
-  const evaluated_result = eval(edited_expression);
+  evaluated_result = eval(edited_expression);
   document.getElementById("result").innerText = evaluated_result;
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "+", "-", "×", "÷"].forEach(function (symbol) {
     document
@@ -33,5 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
           updateExpression(expression);
         }
       });
+  });
+  document.querySelector("button#eval").addEventListener("click", function (e) {
+    expression = evaluated_result;
+    updateExpression(expression);
   });
 });
